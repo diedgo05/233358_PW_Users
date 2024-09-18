@@ -1,0 +1,36 @@
+<div class="form-container">
+    <h1 class="text-2xl font-extrabold text-gray-800 mb-6">Agregar Usuario</h1>
+    <form class="edit-form">
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" name="id" id="id" [(ngModel)]="user.id">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" [(ngModel)]="user.name">
+        </div>
+
+        <div class="form-group">
+            <label for="username">Usuario</label>
+            <input type="text" name="username" id="username" [(ngModel)]="user.username">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo</label>
+            <input type="text" name="email" id="email" [(ngModel)]="user.email">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="text" name="phone" id="phone" [(ngModel)]="user.phone">
+        </div>
+
+        <div class="form-group">
+            <label for="website">Sitio Web</label>
+            <input type="text" name="website" id="website" [(ngModel)]="user.website">
+        </div>
+
+        <button class="button-4" type="button" (click)="mostrar()">Agregar</button>
+    </form>
+</div>

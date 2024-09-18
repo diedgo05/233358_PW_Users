@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Iusers } from './interface/i-users';
 
 @Component({
   selector: 'app-root',

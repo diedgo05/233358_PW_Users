@@ -1,0 +1,37 @@
+<div class="main-container">
+    <app-edit-user-form
+        [user]="selectedUser"
+        [disabled]="true"
+        (eventEmitter)="addUser($event)">
+    </app-edit-user-form>
+
+    <div class="table-container">
+        <h1 class="text-4xl font-extrabold text-white text-center mb-8">Álbum de Usuarios</h1>
+        <p class="text-center text-indigo-900 font-semibold mb-8">Datos actualizados de usuarios:</p>
+
+        <div class="overflow-x-auto bg-white p-6 rounded-lg shadow-inner w-full max-w-4xl">
+            <table id="usersTable" class="table-auto w-full bg-gradient-to-r from-yellow-100 via-white to-yellow-100 rounded-lg">
+                <thead>
+                    <tr class="bg-purple-700 text-white">
+                        <th class="py-4 px-6 text-left font-semibold">ID</th>
+                        <th class="py-4 px-6 text-left font-semibold">Nombre</th>
+                        <th class="py-4 px-6 text-left font-semibold">Correo</th>
+                        <th class="py-4 px-6 text-left font-semibold">Teléfono</th>
+                        <th class="py-4 px-6 text-left font-semibold">Sitio Web</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="data-user hover:bg-pink-100 transition-colors duration-300" *ngFor="let user of users">
+                        <td class="py-4 px-6 border-b border-purple-300 text-indigo-700 font-bold">{{user.id}}</td>
+                        <td class="py-4 px-6 border-b border-purple-300 text-pink-700">{{user.name}}</td>
+                        <td class="py-4 px-6 border-b border-purple-300 text-green-600">{{user.email}}</td>
+                        <td class="py-4 px-6 border-b border-purple-300 text-purple-600">{{user.phone}}</td>
+                        <td class="py-4 px-6 border-b border-purple-300">
+                            <a href="http://{{user.website}}" target="_blank" class="text-blue-500 underline hover:text-blue-700">{{user.website}}</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

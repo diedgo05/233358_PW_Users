@@ -1,0 +1,60 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+}
+
+app-edit-user-form {
+    margin-bottom: 2rem; 
+}
+
+.table-container {
+    width: 100%;
+}
+
+.table-auto {
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #6b46c1;
+    color: #fff;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+tbody tr:hover {
+    background-color: #f8bbd0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: #3182ce;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #2b6cb0;
+    text-decoration: none;
+}
